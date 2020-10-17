@@ -1,9 +1,9 @@
 html {
-    font-family: "Acre", sans-serif;
     color: #e6e6e6 !important;
 }
 
 body {
+    font-family: 'Cabin', sans-serif !important;
     background-color: black;
 }
 
@@ -14,12 +14,19 @@ body {
 .topmost-logo-img {
     padding-top: 3px;
     padding-bottom: 2px;
-    border-bottom: 2px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .topmost-logo-container h2 {
     color: #e6e6e6;
     font-size: 1.65rem;
+}
+
+.navbar {
+    border-top: 2px solid #e6e6e6;
+    border-bottom: 2px solid #e6e6e6;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .navbar-brand-icon {
@@ -29,13 +36,34 @@ body {
 .navbar-toggler-icon {
     font-size: 1.5em;
     height: 1em;
+    width: auto;
     color: #e6e6e6;
 }
 
+.navbar-toggler {
+    float: none;
+    display: block;
+    width: 100%;    
+}
+
+.navbar-expand-lg {
+    text-align: center;
+}
+
+.nav-link {
+    text-align: center;
+}
+
 .nav-item a {
+    font-size: 1.5em;
+    text-transform: capitalize;
     color: #e6e6e6;
 }
 
 .nav-item a:hover {
     text-shadow: 1px 1px 3px white;
+}
+
+.text-red {
+    color: rgb(255,0,0);
 }
