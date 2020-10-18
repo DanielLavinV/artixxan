@@ -77,6 +77,13 @@ body {
 .gallery-container img {
     width: 100%;
     height: auto;
+    margin-top: 0.3em;
+}
+
+.gallery-container img:hover {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
 }
 
 .gallery-container .row {
@@ -84,23 +91,123 @@ body {
 }
 
 .card {
-    background-color: dimgray;
-    position: fixed;
-    width: 50%;
+    margin-top: auto;
+    color: #dcdcdc;
+    margin-bottom: auto;
+    z-index : 100;
+    background-color: dimgrey;
+    width: 100%;
     margin: auto;
-    /* Will not center vertically and won't work in IE6/7. */
-    top: 0;
-    right: 0;
+    line-height: 1em;
 }
 
 .card img {
     width: 100%;
 }
 
-.card-hide {
+.card.show {
+    display: block;
+    animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+.card.hidden {
     display: none;
+    animation: fade-slide-out 0.3s ease-in forwards;
 }
 
 .card-col {
     padding: 0;
+}
+
+.card-text {
+    font-size: 1.3em;
+}
+
+.card-btn-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 0.8em;
+    margin-bottom: 0.8em;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,1);
+}
+
+.card-btn-container-mobile {
+    padding: 0.2em;
+    line-height: 0.8em;
+    font-size: 0.8em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+}
+
+.card-btn-container-mobile a {
+    padding: 0.2em 0.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-secondary {
+    font-size: 1.3em;
+    border: 0 0 0 0;
+    background-color: #c2352b;
+}
+
+.btn-secondary:hover {
+    background-color: #ff5447;
+}
+
+#backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 2;
+    pointer-events: none;
+    display: none;
+}
+
+#backdrop.visible {
+    display: block;
+    pointer-events: all;
+}
+
+#popup-container {
+    z-index: 1;
+    align-content: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#popup-container.show {
+    display: grid;
+}
+
+@keyframes fade-slide-in {
+    from {
+      transform: translateY(-5rem);
+    }
+    to {
+      transform: translateY(0);
+    }
+}
+
+@keyframes fade-slide-out {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(5rem);
+    }
 }
