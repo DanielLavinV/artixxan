@@ -64,6 +64,10 @@ body {
     color: rgb(255, 0, 0);
 }
 
+.nav-link:hover .text-red {
+    text-shadow: 1px 1px 1px red;
+}
+
 .gallery-container {
     padding-top: 1.5em;
     text-align: center;
@@ -211,6 +215,107 @@ body {
 
 #popup-container.show {
     display: grid;
+}
+
+#cotizacion .madera-container{
+    border-top: 1px solid #e6e6e6;
+    padding-top: 1em;
+}
+
+#cotizacion .btn-group {
+    width: 100%;
+}
+
+#cotizacion .btn-group .row {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+
+#cotizacion img {
+    width: 100%;
+    height: 3em;
+    object-fit: cover;
+}
+
+#cotizacion [class*="col"] {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+#cotizacion .btn-secondary {
+    width: 100%;
+    height: 3em;
+    position: relative;
+    color: #e6e6e6;
+    background-color: dimgray;
+    opacity: 0.5;
+    border: none;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    border-radius: 0;
+}
+
+#cotizacion input[type*="radio"] {
+    display: none !important;
+}
+
+#cotizacion .madera-container .btn-secondary:hover, 
+#cotizacion .madera-container .btn-secondary.active {
+    box-shadow: none;
+    border: none;
+    opacity: 1;
+}
+
+#cotizacion .base-container .btn-secondary:hover, 
+#cotizacion .base-container .btn-secondary.active,
+#cotizacion .acabado-container .btn-secondary:hover, 
+#cotizacion .acabado-container .btn-secondary.active {
+    box-shadow: none;
+    border: none;
+    opacity: 1;
+}
+
+#cotizacion h3 {
+    font-size: 1.3em;
+    color: #e6e6e6;
+}
+
+#cotizacion h4 {
+    color: #e6e6e6;
+    text-align: center;
+}
+
+#cotizacion .btn-primary h4 {
+    margin: 0;
+}
+
+#cotizacion h5 {
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+
+#cotizacion .calcular-container {
+    margin-top: 0.5em;
+}
+
+.resultado-cotizacion {
+    padding-left: 1em;
+}
+
+#footer {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.redes {
+    text-align: center;
+    color: #6e6c6c;
 }
 
 @keyframes fade-slide-in {

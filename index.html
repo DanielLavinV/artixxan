@@ -49,14 +49,14 @@
                     <div class="collapse navbar-collapse" id="navbar-menu-items">
                         <ul class="navbar-nav mx-auto py-0">
                             <li class="nav-item px-5 py-0 active">
-                                <a class="nav-link py-0" href="#gallery">GALERÍA <span
+                                <a class="nav-link py-0" href="#gallery"><span class="text-red">&#183</span> GALERÍA <span class="text-red">&#183</span><span
                                         class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item px-5 py-0">
-                                <a class="nav-link py-0" href="#">COTIZACIÓN</a>
+                                <a class="nav-link py-0" href="#cotizacion"><span class="text-red">&#183</span> COTIZAR <span class="text-red">&#183</span></a>
                             </li>
                             <li class="nav-item px-5 py-0">
-                                <a class="nav-link py-0" href="#">CONTACTO</a>
+                                <a class="nav-link py-0" href="#"><span class="text-red">&#183</span> CONTACTO <span class="text-red">&#183</span></a>
                             </li>
                         </ul>
                     </div>
@@ -91,7 +91,7 @@
     </div>
 
     <!-- Holds all overlayed elements-->
-    <div id="popup-container" class="container-flex align-items-center hidden">
+    <div id="popup-container" class="container-fluid align-items-center hidden">
         <div id="backdrop"></div>
         <div class="row">
             <div class="col-sm-2 col-lg"></div>
@@ -118,7 +118,7 @@
                                 <div id="tarjeta-img2" class="card-body hidden">
                                     <div class="container-fluid card-title-container">
                                         <p class="card-title">MESA DOBLE</p>
-                                    </div> 
+                                    </div>
                                     <p class="card-text"><strong>Madera:</strong> tzamán</p>
                                     <p class="card-text"><strong>Base:</strong> herrería de acero dulce</p>
                                     <p class="card-text"><strong>Estilo:</strong> ARX</p>
@@ -137,6 +137,121 @@
                 </div>
             </div>
             <div class="col-sm-2 col-lg"></div>
+        </div>
+    </div>
+
+    <!--################## cotización #############-->
+    <div id="cotizacion" class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-sm-12 col-md-10">
+                <div class="container madera-container">
+                    <div class=container>
+                        <h4><span class="text-red">&#183</span> Cotización exprés <span class="text-red">&#183</span></h4>
+                    </div>                    
+                    <h3>Elige la madera</h3>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <img src="resources/imgs/madera-saman-600x600.jpg">
+                                    <input type="radio" name="madera" id="saman" autocomplete="off">
+                                    <h5 >Tzamán</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <img src="resources/imgs/madera-parota-600x600.jpg">
+                                    <input type="radio" name="madera" id="parota" autocomplete="off">
+                                    <h5>Parota</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <img src="resources/imgs/madera-macuilis-600x600.jpg">
+                                    <input type="radio" name="madera" id="macuilis" autocomplete="off">
+                                    <h5>Macuilis</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <img src="resources/imgs/madera-caoba-600x600.jpg">
+                                    <input type="radio" name="madera" id="caoba" autocomplete="off">
+                                    <h5>Caoba</h5>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container base-container">
+                    <h3>Elige la base</h3>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="base" id="casa" autocomplete="off">
+                                    <h5>La de la casa</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="base" id="cuadrada" autocomplete="off">
+                                    <h5>Cuadrada</h5>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container acabado-container">
+                    <h3>Elige el acabado</h3>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="acabado" id="mate" autocomplete="off">
+                                    <h5>Mate</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="acabado" id="semimate" autocomplete="off">
+                                    <h5>Semimate</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="acabado" id="brilloso" autocomplete="off">
+                                    <h5>Brilloso</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="acabado" id="piano" autocomplete="off">
+                                    <h5>Piano</h5>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container calcular-container">
+                    <label id="calcular-btn" class="btn btn-primary">
+                        <h4>Calcular</h4>
+                    </label>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-4"></div>
+            <div class="col-sm-12 col-md-4">
+                <div class="container-fluid redes">
+                    <p>SÍGUENOS EN REDES</p><br>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4"></div>                        
         </div>
     </div>
 
