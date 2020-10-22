@@ -1,50 +1,268 @@
-<!DOCTYPE html>
-<html lang="es-MX">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artixxan</title>
-    <link rel="icon" href="resources/imgs/LOGO-SECUNDARIO-PARA-RS-cropped.png">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- icono -->
+    <link rel="icon" href="resources/imgs/logosecundariorecortado.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/styles/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="resources/styles/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/styles/artixxan.css">
-    <script src="resources/scripts/app.js" defer></script>
+
+    <title>Artixxan</title>
 </head>
+
 <body>
 
-    <header>
-        <div>
-            <img src="resources/imgs/Artixan-Logo-Para-RS-cropped.png">
+    <!--############### Top logo ################-->
+    <div class="container topmost-logo-container">
+        <div class="row">
+            <div class="col-2 col-lg-4"></div>
+            <div class="col-8 col-lg-4">
+                <img class="img-fluid topmost-logo-img" src="resources/imgs/Artixan-Logo-Para-RS-cropped.png">
+            </div>
+            <div class="col-2 col-lg-4"></div>
         </div>
-        <hr>
-        <div>
-            <h3>mueblería artesanal mexicana</h3>                
+        <div clas="row">
+            <div class="col">
+                <h2>muebles artesanales mexicanos</h2>
+            </div>
         </div>
-        <div class="nav-bar">
-            <nav>
-                <ul id="dropdownList">
-                    <li><a href="#inicio">INICIO</a></li>
-                    <li><a href="#galeria">GALERÍA</a></li>
-                    <li><a href="#cotizar">COTIZACIÓN</a></li>
-                    <li><a href="#contacto">CONTACTO</a></li>
-                    <li><a class="dropdownIcon" href="javascript:void(0);">&#9776</a></li>
-                </ul>
-            </nav>
+    </div>
+
+    <!-- ############# Navbar ############# -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-sm-12 col-md-10">
+                <div role="navigation" class="navbar navbar-expand-lg py-0">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu-items"
+                        aria-controls="navbar-menu-items" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">MENÚ <span class="text-red">&#9776</span></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar-menu-items">
+                        <ul class="navbar-nav mx-auto py-0">
+                            <li class="nav-item px-5 py-0 active">
+                                <a class="nav-link py-0" href="#gallery"><span class="text-red">&#183</span> GALERÍA <span class="text-red">&#183</span><span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item px-5 py-0">
+                                <a class="nav-link py-0" href="#cotizacion"><span class="text-red">&#183</span> COTIZAR <span class="text-red">&#183</span></a>
+                            </li>
+                            <li class="nav-item px-5 py-0">
+                                <a class="nav-link py-0" href="#"><span class="text-red">&#183</span> CONTACTO <span class="text-red">&#183</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
         </div>
-    </header>
-    
-    <section id="section-about">
-        <div>
-            <img src="resources/imgs/LOGO-SECUNDARIO-PARA-RS-cropped.png">
-            <p>Somos expertos en la fabricación de muebles funcionales, personalizados y adaptados a los requerimientos y necesidades específicas de cada cliente.</p>
+    </div>
+
+    <!-- ############# Gallery ############# -->
+
+    <div id="gallery" class="container gallery-container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-sm-12 col-lg-10">
+                <h4 class="px-5"><span class="text-red">"</span>Somos expertos en la fabricación de muebles funcionales,
+                    personalizados y adaptados a los requerimientos y necesidades específicas de cada cliente.<span
+                        class="text-red">"</span></h4>
+            </div>
+            <div class="col"></div>
         </div>
-    </section>
-    <section id="section-gallery">
-    </section>
-    <section id="section-cotizacion">
-    
-    </section>
-    <section id="section-contact">
-    
-    </section>
-    
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-sm-12 col-md-5">
+                <a class="muestra-clickable"><img alt="img1" src="resources/imgs/muestra1-800x800.jpeg"></a>
+            </div>
+            <div class="col-sm-12 col-md-5">
+                <a class="muestra-clickable"><img alt="img2" src="resources/imgs/muestra2-800x800.jpeg"></a>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <!-- Holds all overlayed elements-->
+    <div id="popup-container" class="container-fluid align-items-center hidden">
+        <div id="backdrop"></div>
+        <div class="row">
+            <div class="col-sm-2 col-lg"></div>
+            <div class="col-sm-8 col-lg-7">
+                <div class="card hidden">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-8 card-col">
+                                <img class="hidden" id="muestra-img1" src="resources/imgs/muestra1-800x800.jpeg" alt="">
+                                <img class="hidden" id="muestra-img2" src="resources/imgs/muestra2-800x800.jpeg" alt="">
+                            </div>
+                            <div class="col-sm-12 col-lg-4 card-col">
+                                <div id="tarjeta-img1" class="card-body hidden">
+                                    <div class="container-fluid card-title-container">
+                                        <p class="card-title">BARRA</p>
+                                    </div>
+                                    <p class="card-text"><strong>Madera:</strong> tzamán</p>
+                                    <p class="card-text"><strong>Base:</strong> herrería</p>
+                                    <p class="card-text"><strong>Estilo:</strong> AXX</p>
+                                    <p class="card-text"><strong>Capacidad:</strong> 6 personas</p>
+                                    <p class="card-text"><strong>Acabado:</strong> brilloso</p>
+                                    <p class="card-text"><strong>Extra:</strong> corazón de tzamán colgante</p>
+                                </div>
+                                <div id="tarjeta-img2" class="card-body hidden">
+                                    <div class="container-fluid card-title-container">
+                                        <p class="card-title">MESA DOBLE</p>
+                                    </div>
+                                    <p class="card-text"><strong>Madera:</strong> tzamán</p>
+                                    <p class="card-text"><strong>Base:</strong> herrería de acero dulce</p>
+                                    <p class="card-text"><strong>Estilo:</strong> ARX</p>
+                                    <p class="card-text"><strong>Capacidad:</strong> 8 personas</p>
+                                    <p class="card-text"><strong>Acabado:</strong> mate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-btn-container d-none d-sm-block">
+                            <a href="javascript:void(0);" class="btn btn-secondary">Cerrar</a>
+                        </div>
+                        <div class="card-btn-container-mobile d-sm-block d-md-none">
+                            <a href="javascript:void(0);" class="btn btn-secondary">X</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 col-lg"></div>
+        </div>
+    </div>
+
+    <!--################## cotización #############-->
+    <div id="cotizacion" class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-sm-12 col-md-10">
+                <div class="container madera-container">
+                    <div class=container>
+                        <h4><span class="text-red">&#183</span> Cotización exprés <span class="text-red">&#183</span></h4>
+                    </div>                    
+                    <h3>Elige la madera<span class="error-alert-icon">!</span></h3>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <img src="resources/imgs/madera-saman-600x600.jpg">
+                                    <input type="radio" name="madera" id="saman" autocomplete="off">
+                                    <h5 >Tzamán</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <img src="resources/imgs/madera-parota-600x600.jpg">
+                                    <input type="radio" name="madera" id="parota" autocomplete="off">
+                                    <h5>Parota</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <img src="resources/imgs/madera-macuilis-600x600.jpg">
+                                    <input type="radio" name="madera" id="macuilis" autocomplete="off">
+                                    <h5>Macuilis</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <img src="resources/imgs/madera-caoba-600x600.jpg">
+                                    <input type="radio" name="madera" id="caoba" autocomplete="off">
+                                    <h5>Caoba</h5>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container base-container">
+                    <h3>Elige la base<span class="error-alert-icon">!</span></h3>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="base" id="casa" autocomplete="off">
+                                    <h5>La de la casa</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="base" id="cuadrada" autocomplete="off">
+                                    <h5>Cuadrada</h5>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container acabado-container">
+                    <h3>Elige el acabado<span class="error-alert-icon">!</span></h3>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="acabado" id="mate" autocomplete="off">
+                                    <h5>Mate</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="acabado" id="semimate" autocomplete="off">
+                                    <h5>Semimate</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="acabado" id="brilloso" autocomplete="off">
+                                    <h5>Brilloso</h5>
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="acabado" id="piano" autocomplete="off">
+                                    <h5>Piano</h5>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container calcular-container">
+                    <label id="calcular-btn" class="btn btn-primary">
+                        <h4>Calcular</h4>
+                    </label>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <div id="footer" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-4"></div>
+            <div class="col-sm-12 col-md-4">
+                <div class="container-fluid redes">
+                    <p>SÍGUENOS EN REDES</p><br>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4"></div>                        
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script src="resources/scripts/app.js"></script>
+    <!--<script src="/resources/scripts/bootstrap/js/bootstrap.bundle.min.js"></script>-->
 </body>
+
 </html>

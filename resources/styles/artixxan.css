@@ -318,6 +318,21 @@ body {
     color: #6e6c6c;
 }
 
+.error-alert {
+    padding-left: 0.3em;
+}
+
+.error-alert-icon {
+    border-radius: 25%;
+    font-weight: 600;
+    margin-left: 0.5em;
+    margin-right: 0.3em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    color: black;
+    background-color: red;
+}
+
 @keyframes fade-slide-in {
     from {
       transform: translateY(-5rem);

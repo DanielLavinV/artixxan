@@ -7,6 +7,7 @@ const RADIO_BUTTON_NAME_MADERA = 'madera';
 const RADIO_BUTTON_NAME_BASE = 'base';
 const RADIO_BUTTON_NAME_ACABADO = 'acabado';
 
+const calcularBtn = document.querySelector("#calcular-btn");
 
 const preciosMadera = {
     saman: 100,
@@ -101,10 +102,11 @@ const cardCloseButtonClickHandler = () => {
 const calculateTotalCost = () => {
     //iterate over the radio button groups and find the selected options in all
     let totalSum = 0;
+    let errors = [];
     for(const btnGroup of document.querySelectorAll("#cotizacion .btn-group")) {
         const selected = btnGroup.querySelector(".active input"); //select the input element inside the .active label element
         if(selected === undefined) { //if no option is selected in current button group
-            
+            errors.push(btnGroup);
             //throw an error to alert the user
         } else {
             if(selected.name === RADIO_BUTTON_NAME_MADERA) {
@@ -116,6 +118,9 @@ const calculateTotalCost = () => {
             }
         }
     }
+    if(errors.length != 0) {
+        throw errors;
+    }
     return totalSum;
 }
 
@@ -126,12 +131,31 @@ const displayTotalCost = (sum) => {
         resultElement.className = "resultado-cotizacion";
     }
     resultElement.innerHTML = `<h3>Inversión aproximada: ${sum} MXN</h3>`;
-    document.querySelector("#calcular-btn").insertAdjacentElement('afterend', resultElement);
+    calcularBtn.insertAdjacentElement('afterend', resultElement);
+}
+
+const displayTotalCostErrors = (errors) => {
+    for(const err in errors) { //err is an html radio button element where error exists
+        console.log(err);
+    }
+
+    let errorAlertElement = document.querySelector(".error-alert");
+    if(errorAlertElement === null) {
+        errorAlertElement = document.createElement("label");
+        errorAlertElement.className = "error-alert";
+    }
+    errorAlertElement.innerHTML = `<h3><span class="error-alert-icon">!</span><span class="text-red">Por favor elige</span></h3>`;
+
+    calcularBtn.insertAdjacentElement('afterend',errorAlertElement);
 }
 
 //calculate the total of the cotization and append it after the "calcular" button
-const calcularButtonClickHandler = (ev) => {
-    displayTotalCost(calculateTotalCost());
+const calcularButtonClickHandler = () => {
+    try {
+        displayTotalCost(calculateTotalCost());
+    } catch (errors) {
+        displayTotalCostErrors(errors);
+    }
 }
 
 for(const clickableImage of document.querySelectorAll(".muestra-clickable")){
@@ -143,6 +167,6 @@ for(const clickableImage of document.querySelectorAll(".card .btn-secondary")){
 }
 
 document.querySelector(ELEMENT_QUERY_BACKDROP).addEventListener('click', backdropClickHandler);
-document.querySelector("#calcular-btn").addEventListener('click', calcularButtonClickHandler);
+calcularBtn.addEventListener('click', calcularButtonClickHandler);
 
 console.log("Loaded script successfully.");

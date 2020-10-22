@@ -1,0 +1,19 @@
+#gallery-container
+    padding:
+        top: 1.5em
+    text:
+        align: center
+    h4
+        color: $theme-color-primary
+        font:
+            style: italic
+    img
+        width: 100%
+        height: auto
+        margin:
+            top: 0.3em
+        &:hover
+            @include boxshadowAllCompatible(0px, 0px, 5px, 0px, rgba(255, 255, 255, 1))
+    .row
+        margin: 
+            bottom: 1.5em
