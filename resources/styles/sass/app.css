@@ -6,6 +6,14 @@
   display: none;
 }
 
+@keyframes fade-slide-in {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 html {
   color: #e6e6e6 !important;
 }
@@ -13,6 +21,10 @@ html {
 body {
   font-family: "Cabin", sans-serif !important;
   background-color: black;
+}
+
+button:focus {
+  outline: none;
 }
 
 .topmost-logo-container {
@@ -79,8 +91,86 @@ body {
   display: grid;
 }
 
+#cotizacion .madera-container {
+  border-top: 1px solid #e6e6e6;
+  padding-top: 1em;
+}
+#cotizacion .btn-group {
+  width: 100%;
+}
+#cotizacion .btn-group .row {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+#cotizacion .btn-primary h4 {
+  margin: 0;
+}
+#cotizacion .btn-secondary {
+  width: 100%;
+  height: 3em;
+  position: relative;
+  color: #e6e6e6;
+  background-color: dimgray;
+  opacity: 0.5;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+#cotizacion .btn-secondary:hover, #cotizacion .btn-secondary.active {
+  box-shadow: none;
+  border: none;
+  opacity: 1;
+}
+#cotizacion img {
+  width: 100%;
+  height: 3em;
+  object-fit: cover;
+}
+#cotizacion [class*=col] {
+  padding: 0;
+  margin: 0;
+}
+#cotizacion input[type*=radio] {
+  display: none !important;
+}
+#cotizacion h3 {
+  font-size: 1.3em;
+  color: #e6e6e6;
+}
+#cotizacion h4 {
+  text-align: center;
+  color: #e6e6e6;
+}
+#cotizacion h5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+#cotizacion .calcular-container {
+  margin-top: 0.5em;
+}
+#cotizacion .resultado-cotizacion {
+  padding-left: 1em;
+}
+
+#footer {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#footer .redes {
+  text-align: center;
+  color: #6e6c6c;
+}
+
 .navbar {
   border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .navbar-brand-icon {
@@ -96,7 +186,7 @@ body {
 
 .navbar-toggler {
   float: none;
-  display: none;
+  display: block;
   width: 100%;
 }
 
@@ -190,6 +280,20 @@ body {
 }
 .btn-secondary:hover {
   background-color: #ff5447;
+}
+
+.error-alert {
+  padding-left: 0.3em;
+}
+.error-alert-icon {
+  border-radius: 25%;
+  font-weight: 600;
+  margin-left: 0.5em;
+  margin-right: 0.3em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  color: black;
+  background-color: red;
 }
 
 /*# sourceMappingURL=app.css.map */

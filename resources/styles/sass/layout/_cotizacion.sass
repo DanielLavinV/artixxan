@@ -1,0 +1,69 @@
+#cotizacion
+    .madera-container
+        border:
+            top: 1px solid $theme-color-primary
+        padding:
+            top: 1em
+    .btn
+        &-group
+            width: 100%
+            .row
+                margin:
+                    left: 0
+                    right: 0
+                    bottom: 0.5em
+                width: 100%
+        &-primary
+            h4
+                margin: 0
+        &-secondary
+            width: 100%
+            height: 3em
+            position: relative
+            color: $theme-color-primary
+            background: 
+                color: dimgray
+            opacity: 0.5
+            border: none
+            padding: 0
+            margin: 0
+            border:
+                radius: 0
+            &:hover,&.active
+                box:
+                    shadow: none
+                border: none
+                opacity: 1
+    img
+        width: 100%
+        height: 3em
+        object-fit: cover
+    [class*="col"]
+        padding: 0
+        margin: 0
+    input[type*="radio"]
+        display: none !important
+    h3
+        font:
+            size: 1.3em
+        color: $theme-color-primary
+    h4
+        text:
+            align: center
+        color: $theme-color-primary
+    h5
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        text:
+            decoration: underline
+        font:
+            size: 1.5em
+
+    .calcular-container
+        margin:
+            top: 0.5em
+    .resultado-cotizacion
+        padding:
+            left: 1em
