@@ -1,6 +1,7 @@
 const CLASS_NAME_HIDDEN = 'hidden';
 const CLASS_NAME_SHOW = 'show';
 const CLASS_NAME_VISIBLE = 'visible';
+const CLASS_NAME_ACTIVE = 'active';
 const ELEMENT_QUERY_BACKDROP = '#backdrop';
 const ELEMENT_QUERY_POPUPCONTAINER_CARD = '#popup-container .card';
 const RADIO_BUTTON_NAME_MADERA = 'madera';
@@ -105,10 +106,11 @@ const calculateTotalCost = () => {
     let errors = [];
     for(const btnGroup of document.querySelectorAll("#cotizacion .btn-group")) {
         const selected = btnGroup.querySelector(".active input"); //select the input element inside the .active label element
-        if(selected === undefined) { //if no option is selected in current button group
+        if(selected === null) { //if no option is selected in current button group
             errors.push(btnGroup);
             //throw an error to alert the user
         } else {
+            btnGroup.previousElementSibling.querySelector(".error-alert-icon").classList.add("hidden");
             if(selected.name === RADIO_BUTTON_NAME_MADERA) {
                 totalSum += preciosMadera[selected.id]; //["caoba"]
             } else if (selected.name === RADIO_BUTTON_NAME_BASE) {
@@ -132,11 +134,18 @@ const displayTotalCost = (sum) => {
     }
     resultElement.innerHTML = `<h3>Inversión aproximada: ${sum} MXN</h3>`;
     calcularBtn.insertAdjacentElement('afterend', resultElement);
+    try {
+        resultElement.nextElementSibling.classList.add("hidden");
+    } catch (e) {
+
+    }
 }
 
 const displayTotalCostErrors = (errors) => {
-    for(const err in errors) { //err is an html radio button element where error exists
-        console.log(err);
+    console.log(errors);
+    for(const err of errors) { //err is an html radio button element where error exists
+        console.log(err.previousElementSibling/*h3 elige la... etc*/.querySelector(".error-alert-icon"));
+        err.previousElementSibling/*h3 elige la... etc*/.querySelector(".error-alert-icon").classList.remove("hidden");
     }
 
     let errorAlertElement = document.querySelector(".error-alert");

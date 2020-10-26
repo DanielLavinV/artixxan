@@ -8,10 +8,12 @@
         color: dimgrey
     width: 100%
     line-height: 1.2em
-
+    border:
+        radius: 0.3em
     img
+        border:
+            radius: 0.3em 0 0 0.3em
         width: 100%
-
     &.show
         display: block
         animation: fade-slide-in 0.3s ease-out forwards
@@ -34,6 +36,8 @@
             margin:
                 bottom: 0.75em
             padding: 0.2em
+            border: 
+                radius: 0.3em
             line:
                 height: 1rem
             background:
@@ -62,3 +66,9 @@
                     top: 0.5em
                 a
                     padding: 0.2em 0.5em
+
+@mixin module-card-mobile()
+   .card
+       img
+        border:
+            radius: 0.3em 0.3em 0 0

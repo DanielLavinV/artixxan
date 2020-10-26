@@ -1,9 +1,40 @@
 #footer
+    border:
+        top: 1px solid $theme-color-footer-text
     margin: 
         top: 1em
         bottom: 1em
+    padding:
+        top: 1em
+
+    p
+        margin:
+            bottom: 0.5em
 
     .redes
         text:
             align: center
         color: $theme-color-footer-text
+        &-icons
+            display: flex
+            justify-content: center
+            img
+                width: 1.5em
+                margin:
+                    left: 0.2em
+                    right: 0.2em
+
+    .web-design
+        text-align: right
+        color: #303030
+        font-size: 0.8em
+
+@mixin footer-mobile()
+    #footer
+        .web-design
+            text-align: center
+            margin:
+                top: 1.5em
+            p
+                margin:
+                    bottom: 0

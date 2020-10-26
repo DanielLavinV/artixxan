@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="resources/styles/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/styles/sass/app.css">
     <!-- <link rel="stylesheet" href="resources/styles/artixxan.css"> -->
-
     <title>Artixxan</title>
 </head>
 
@@ -50,14 +49,16 @@
                     <div class="collapse navbar-collapse" id="navbar-menu-items">
                         <ul class="navbar-nav mx-auto py-0">
                             <li class="nav-item px-5 py-0 active">
-                                <a class="nav-link py-0" href="#gallery"><span class="text-red">&#183</span> GALERÍA <span class="text-red">&#183</span><span
-                                        class="sr-only">(current)</span></a>
+                                <a class="nav-link py-0" href="#gallery"><span class="text-red">&#183</span> GALERÍA
+                                    <span class="text-red">&#183</span><span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item px-5 py-0">
-                                <a class="nav-link py-0" href="#cotizacion"><span class="text-red">&#183</span> COTIZAR <span class="text-red">&#183</span></a>
+                                <a class="nav-link py-0" href="#cotizacion"><span class="text-red">&#183</span> COTIZAR
+                                    <span class="text-red">&#183</span></a>
                             </li>
                             <li class="nav-item px-5 py-0">
-                                <a class="nav-link py-0" href="#"><span class="text-red">&#183</span> CONTACTO <span class="text-red">&#183</span></a>
+                                <a class="nav-link py-0" href="#contacto"><span class="text-red">&#183</span> CONTACTO <span
+                                        class="text-red">&#183</span></a>
                             </li>
                         </ul>
                     </div>
@@ -147,17 +148,18 @@
             <div class="col"></div>
             <div class="col-sm-12 col-md-10">
                 <div class="container madera-container">
-                    <div class=container>
-                        <h4><span class="text-red">&#183</span> Cotización exprés <span class="text-red">&#183</span></h4>
-                    </div>                    
-                    <h3>Elige la madera<span class="error-alert-icon">!</span></h3>
+                    <div class="container section-title">
+                        <h4><span class="text-red">&#183</span> Cotización exprés <span class="text-red">&#183</span>
+                        </h4>
+                    </div>
+                    <h3>Elige la madera<span class="error-alert-icon hidden">!</span></h3>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <div class="row">
                             <div class="col-md-3">
                                 <label class="btn btn-secondary">
                                     <img src="resources/imgs/madera-saman-600x600.jpg">
                                     <input type="radio" name="madera" id="saman" autocomplete="off">
-                                    <h5 >Tzamán</h5>
+                                    <h5>Tzamán</h5>
                                 </label>
                             </div>
                             <div class="col-md-3">
@@ -185,7 +187,7 @@
                     </div>
                 </div>
                 <div class="container base-container">
-                    <h3>Elige la base<span class="error-alert-icon">!</span></h3>
+                    <h3>Elige la base <span class="d-inline-block" data-toggle="tooltip" title="Todas nuestras bases se ajustan al diseño de tu tablón" data-placement="right">&#8505;</span><span class="error-alert-icon hidden">!</span></h3>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <div class="row">
                             <div class="col-md-6">
@@ -204,7 +206,7 @@
                     </div>
                 </div>
                 <div class="container acabado-container">
-                    <h3>Elige el acabado<span class="error-alert-icon">!</span></h3>
+                    <h3>Elige el acabado<span class="error-alert-icon hidden">!</span></h3>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <div class="row">
                             <div class="col-md-3">
@@ -244,15 +246,57 @@
         </div>
     </div>
 
+    <!--######################## CONTACTO ###########################-->
+
+    <div id="contacto" class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-sm-12 col-md-10">
+                <div class="container section-title">
+                    <h4><span class="text-red">&#183</span> Contacto <span class="text-red">&#183</span></h4>
+                </div>
+                <h3>Tu nombre</h3>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Escribe tu nombre..." aria-label="name" aria-describedby="basic-addon1">
+                  </div>
+                <h3>Tu correo</h3>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="escribetu@correoaqui.com" aria-label="email" aria-describedby="basic-addon1">
+                  </div>
+                <h3>Tu mensaje</h3>
+                <div class="input-group mb-3">
+                    <textarea class="form-control" placeholder="Escríbenos un mensaje..." aria-label="message"></textarea>
+                </div>
+                <div class="enviar-container">
+                    <label id="enviar-btn" class="btn btn-primary">
+                        <h4>Enviar</h4>
+                    </label>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <!--#################### FOOTER Y REDES ###################-->
+
     <div id="footer" class="container-fluid">
         <div class="row">
             <div class="col-sm-12 col-md-4"></div>
             <div class="col-sm-12 col-md-4">
                 <div class="container-fluid redes">
-                    <p>SÍGUENOS EN REDES</p><br>
+                    <p>SÍGUENOS EN REDES</p>
+                    <div class="redes-icons">
+                        <a href="https://www.facebook.com/dan64"><img src="resources/imgs/facebook.svg"></a>
+                        <img src="resources/imgs/instagram.svg">
+                        <img src="resources/imgs/twitter.svg">
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4"></div>                        
+            <div class="col-sm-12 col-md-4">
+                <div class="container-fluid web-design">
+                    <p>Web design by: <a>@DanielLavin</a></p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -263,6 +307,11 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
     <script src="resources/scripts/app.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
     <!--<script src="/resources/scripts/bootstrap/js/bootstrap.bundle.min.js"></script>-->
 </body>
 

@@ -27,6 +27,11 @@ button:focus {
   outline: none;
 }
 
+h3 {
+  font-size: 1.3em;
+  color: #e6e6e6;
+}
+
 .topmost-logo-container {
   text-align: center;
 }
@@ -41,12 +46,12 @@ button:focus {
 }
 
 #gallery-container {
-  padding-top: 1.5em;
   text-align: center;
 }
 #gallery-container h4 {
   color: #e6e6e6;
   font-style: italic;
+  margin-bottom: 0;
 }
 #gallery-container img {
   width: 100%;
@@ -54,12 +59,13 @@ button:focus {
   margin-top: 0.3em;
 }
 #gallery-container img:hover {
+  cursor: pointer;
   -webkit-box-shadow: 0px 0px 5px 0px white;
   -moz-box-shadow: 0px 0px 5px 0px white;
   box-shadow: 0px 0px 5px 0px white;
 }
 #gallery-container .row {
-  margin-bottom: 1.5em;
+  margin-top: 1em;
 }
 
 #backdrop {
@@ -91,10 +97,6 @@ button:focus {
   display: grid;
 }
 
-#cotizacion .madera-container {
-  border-top: 1px solid #e6e6e6;
-  padding-top: 1em;
-}
 #cotizacion .btn-group {
   width: 100%;
 }
@@ -103,9 +105,6 @@ button:focus {
   margin-right: 0;
   margin-bottom: 0.5em;
   width: 100%;
-}
-#cotizacion .btn-primary h4 {
-  margin: 0;
 }
 #cotizacion .btn-secondary {
   width: 100%;
@@ -133,16 +132,20 @@ button:focus {
   padding: 0;
   margin: 0;
 }
+#cotizacion [data-toggle=tooltip] {
+  font-size: 0.5em;
+  border: 2px solid #e6e6e6;
+  border-radius: 50%;
+  margin-left: 0.8em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
 #cotizacion input[type*=radio] {
   display: none !important;
 }
-#cotizacion h3 {
-  font-size: 1.3em;
-  color: #e6e6e6;
-}
-#cotizacion h4 {
-  text-align: center;
-  color: #e6e6e6;
+#cotizacion .base-container h3 {
+  display: flex;
+  align-items: center;
 }
 #cotizacion h5 {
   position: absolute;
@@ -155,17 +158,52 @@ button:focus {
 #cotizacion .calcular-container {
   margin-top: 0.5em;
 }
+#cotizacion .calcular-container label {
+  margin-bottom: 0;
+}
 #cotizacion .resultado-cotizacion {
   padding-left: 1em;
 }
 
 #footer {
+  border-top: 1px solid #6e6c6c;
   margin-top: 1em;
   margin-bottom: 1em;
+  padding-top: 1em;
+}
+#footer p {
+  margin-bottom: 0.5em;
 }
 #footer .redes {
   text-align: center;
   color: #6e6c6c;
+}
+#footer .redes-icons {
+  display: flex;
+  justify-content: center;
+}
+#footer .redes-icons img {
+  width: 1.5em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+#footer .web-design {
+  text-align: right;
+  color: #303030;
+  font-size: 0.8em;
+}
+
+#contacto .name {
+  width: 35%;
+}
+#contacto .email {
+  width: 35%;
+}
+#contacto .message {
+  width: 100%;
+  height: 5em;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .navbar {
@@ -216,8 +254,10 @@ button:focus {
   background-color: dimgrey;
   width: 100%;
   line-height: 1.2em;
+  border-radius: 0.3em;
 }
 .card img {
+  border-radius: 0.3em 0 0 0.3em;
   width: 100%;
 }
 .card.show {
@@ -243,6 +283,7 @@ button:focus {
 .card-title-container {
   margin-bottom: 0.75em;
   padding: 0.2em;
+  border-radius: 0.3em;
   line-height: 1rem;
   background-color: #e6e6e6;
   -webkit-box-shadow: 0px 0px 3px 0px black;
@@ -273,6 +314,9 @@ button:focus {
   padding: 0.2em 0.5em;
 }
 
+.btn-primary h4 {
+  margin: 0;
+}
 .btn-secondary {
   font-size: 1.3em;
   border: 0;
@@ -294,6 +338,28 @@ button:focus {
   padding-right: 0.4em;
   color: black;
   background-color: red;
+}
+
+.section-title {
+  padding-top: 1em;
+  margin-top: 1em;
+  border-top: 1px solid #e6e6e6;
+  color: #e6e6e6;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .card img {
+    border-radius: 0.3em 0.3em 0 0;
+  }
+
+  #footer .web-design {
+    text-align: center;
+    margin-top: 1.5em;
+  }
+  #footer .web-design p {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
